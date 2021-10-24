@@ -21,7 +21,21 @@ body {
 	margin-right: 5px;
 }
 
-ul {
+footer {
+	position:fixed;
+    bottom:0;
+	display: table;
+	width:100%;
+	color: gray;
+}
+
+#footerNote {
+	float:right;
+	font-size: 7px;
+	display:inline;
+}
+
+#menuBar ul {
   background: red;
   list-style: none;
   margin: 0;
@@ -29,7 +43,7 @@ ul {
   display: block;			  
 }
 
-li {
+#menuBar ul li{
   color: #fff;
   background: red;
   display: block;
@@ -40,21 +54,21 @@ li {
   transition-duration: 0.5s;
 }
   
-li a {
+#menuBar ul li a {
   color: #fff;
 }
 
-li:hover,
-li:focus-within {
+#menuBar ul li:hover,
+#menuBar ul li:focus-within {
   background: darkred;
   cursor: pointer;
 }
 
-li:focus-within a {
+#menuBar ul li:focus-within a {
   outline: none;
 }
 
-ul li ul {
+#menuBar ul li ul {
   background: darkred;
   visibility: hidden;
   opacity: 0;
@@ -66,16 +80,16 @@ ul li ul {
   display: none;
 }
 
-ul li:hover > ul,
-ul li:focus-within > ul,
-ul li ul:hover,
-ul li ul:focus {
+#menuBar ul li:hover > ul,
+#menuBar ul li:focus-within > ul,
+#menuBar ul li ul:hover,
+#menuBar ul li ul:focus {
   visibility: visible;
   opacity: 1;
   display: block
 }
 
-ul li ul li {
+#menuBar ul li ul li {
   clear: both;
   width: 100%;
 }
