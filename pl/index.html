@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 	<head include-html="../common/head.html">
-		<script src="../common/includer.js"></script>
+		<script src="../common/includer.js"></script>		
 	</head>
-	<body>
+	<body>		
 		<div include-html="common/menu.html"></div>
-		<div id="tresc">
+		<div id="content">
 			<br>
 			RadioMod for OMSI 2
 			<br><br>
@@ -15,13 +15,13 @@
 			Plugin zapewnia większą kontrolę nad sterowaniem radia w przeciwieństwie do tego wbudowanego w grze.
 			Jest również zintegrowany z grą - m. in. jej konfiguracja odbywa się za pośrednictwem gry.
 			<br><br>
-			Aktualna wersja: 1.0.0
+			Aktualna wersja: <span id="currentVersion"></span>
 			<br>
-			<a href="../download/radiomod.zip" class="button">Pobierz</a>
+			<a href="../download/radiomod.zip" id="downloadLink" class="button">Pobierz</a>
 			<br><br>
 			<div id="changelog">Historia zmian
 				<ul>
-					<li>1.0.0
+					<li>1.0.0.0
 						<ul>
 							<li>Pierwsza wersja</li>
 						</ul>
@@ -31,7 +31,10 @@
 		</div>		
 		<div include-html="common/footer.html"></div>
 	</body>
+	<script src="../common/main.js"></script>
 	<script>
 		includeHTML();
+		RMVersionToElement("currentVersion");
+		RMVersionToHref("downloadLink");
 	</script>
 </html>
